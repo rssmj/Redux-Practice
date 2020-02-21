@@ -1,9 +1,10 @@
 // 1
 import React from 'react';
 import PlayerCard from './PlayerCard.js';
+import { connect } from 'react-redux';
 
 // 2
-const PlayerList = () => {
+const PlayerList = props => {
 	// 2.1
 	return (
 		<div>
@@ -14,4 +15,12 @@ const PlayerList = () => {
 };
 
 // 3
-export default PlayerList;
+const mapStateToProps = state => {
+	return {
+		players: state.players,
+		isFetching: state.isFetching,
+		errors: state.errors
+	};
+};
+
+export default connect(mapStateToProps, {})(PlayerList);
