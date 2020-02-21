@@ -23,19 +23,21 @@ const playerReducer = (state = initialState, action) => {
 		case FETCH_DATA:
 			return {
 				...state,
-				isFetching: true
+				isFetching: true,
+				errors: ''
 			};
 		case FETCH_SUCCESS:
 			return {
 				...state,
 				players: action.payload,
-				isFetching: false
+				isFetching: false,
+				errors: ''
 			};
 		case FETCH_FAIL:
 			return {
 				...state,
 				isFetching: false,
-				errors: ''
+				errors: action.payload
 			};
 		case POST_DATA:
 			return {
@@ -48,7 +50,8 @@ const playerReducer = (state = initialState, action) => {
 			return {
 				...state,
 				isPosting: false,
-				players: action.payload
+				players: action.payload,
+				errors: ''
 			};
 		case POST_FAIL:
 			return {

@@ -1,62 +1,116 @@
-
-body {
-  font-family: 'Heebo', sans-serif;
-}
-
-.center {
-  text-align: center;
+* {
+	margin: 0 auto;
+	font-family: 'Heebo', sans-serif;
 }
 
 .App {
-  text-align: center;
-  background: url('./assests/soccer-field.jpg') no-repeat center center/cover;
-  height: 100vh;
-  backdrop-filter: blur(3px);
+	transition: 0.2s linear;
 }
 
-
-.form {
-  background-color:rgba(0, 0, 0, 0.7);
-  width: 100%;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+body {
+	background: url('./assests/soccer-field.jpg') no-repeat center center/cover;
+	backdrop-filter: blur(0.25rem) opacity(0.5);
+	background-position-y: -1rem;
+	padding-top: 3rem;
+	height: 100vh;
 }
 
-.input, .btn {
-  padding: 1rem;
-  margin-left: 5rem;
-  border-radius: 2%;
-  font-size: 1rem;
+.titlePlayers {
+	color: #ffffff;
+	font-size: 6rem;
+	margin: 0 0 15rem 6rem;
+	letter-spacing: 0.3rem;
+}
+
+.playerForm {
+	margin: 0 20rem;
+	box-shadow: 2rem 2rem 5rem 5rem rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.formTitle {
+	margin-bottom: 1rem;
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 2.3rem;
+}
+
+.input {
+	font-size: 1.3rem;
+	text-align: center;
+	letter-spacing: 0.4rem;
+	padding: 1.4rem 14rem;
+	margin-left: -0.8rem;
+	border: transparent;
+	box-shadow: 0.2rem 1rem 6rem 1.5rem rgba(255, 255, 255, 0.6);
+	border-radius: 0.5rem;
+	outline: transparent;
+	transition: 0.5s linear;
+}
+
+.input:focus {
+	box-shadow: 0.2rem 0.2rem 2rem 0.2rem rgba(243, 241, 239, 0.6);
+	border-right: 0.1rem solid rgba(200, 200, 200, 0.6);
+	border-left: 0.1rem solid rgba(200, 200, 200, 0.6);
 }
 
 .btn {
-  background-color: rgba(77, 5, 232, 1);
-  color: rgba(255, 255, 255, 1);
-  border-radius: 5%;
+	margin: 2rem 0 0 5rem;
+	font-size: 1.5rem;
+	font-weight: 100;
+	letter-spacing: 0.4rem;
+	padding: 1.8rem 6rem;
+	border-radius: 0.8rem;
+	outline: transparent;
+	background-color: rgba(177, 25, 232, 0.5);
+	color: rgba(255, 255, 255, 1);
+	transition: 0.5s linear;
 }
 
-.btn:hover{
-  background-color: rgba(0, 230, 64, 1);
-  color: rgba(255, 255, 255, 1);
-  box-shadow: 0.2rem 0.2rem 1rem 0.2rem rgba(243, 241, 239, 0.8);
+.btn:hover {
+	background-color: rgba(0, 230, 64, 0.66);
+	color: rgba(0, 0, 0, 0.99);
+	border: 0.25rem solid rgba(0, 0, 0, 0.77);
+	box-shadow: 0.2rem 0.2rem 2rem 0.2rem rgba(243, 241, 239, 0.6);
+}
+
+.titleList {
+	text-align: center;
+	color: #ffffff;
+	font-size: 3rem;
+	margin-top: 12rem;
 }
 
 .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 2rem;
-  
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 4rem 5rem 0 5rem;
+	transition: 0.5s linear;
 }
 
 .card {
-  background-color: rgba(243, 241, 239, 1);
-  margin: 2rem;
-  border-radius: 5%;
-  width: 12rem;
-  height: 12rem;
+	background-color: rgba(243, 241, 239, 1);
+	padding: 3rem;
+	margin: 1rem;
+	border-radius: 5%;
+	width: 14rem;
+	height: 6.5rem;
+	transition: 0.3s linear;
+	text-align: center;
+	box-shadow: 0.2rem 1rem 5rem 1.5rem rgba(255, 255, 255, 0.4);
+	transition: 0.5s linear;
 }
 
 .card:hover {
-  box-shadow: 0.2rem 0.2rem 1rem 0.2rem rgba(243, 241, 239, 0.8);
+	box-shadow: 0.2rem 0.2rem 1rem 0.2rem rgba(243, 241, 239, 0.8);
+}
+
+input::-webkit-input-placeholder {
+	transition: 0.3s linear;
+	opacity: 0.5;
+}
+input:focus::-webkit-input-placeholder {
+	color: transparent;
 }

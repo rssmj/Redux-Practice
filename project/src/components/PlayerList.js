@@ -14,10 +14,12 @@ const PlayerList = props => {
 	}, []);
 	return (
 		<div>
-			{/* <h1>Hello from the PlayerList component!!</h1> */}
-			{props.players.map(player => (
-				<PlayerCard key={player.id} player={player} />
-			))}
+			<h1 className='titleList'>Player List</h1>
+			<div className='card-container'>
+				{props.players.map(player => (
+					<PlayerCard key={player.id} player={player} />
+				))}
+			</div>
 		</div>
 	);
 };

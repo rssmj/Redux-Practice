@@ -23,39 +23,38 @@ const PlayerForm = props => {
 	};
 	return (
 		<div>
-			{/* <h1>Hello from the PlayerForm component!!</h1> */}
-
-			<form id='playerForm'>
-				<label htmlFor='name'>Name</label>
+			<form className='playerForm'>
+				<h1 className='formTitle'>Enter Player Data</h1>
+				<label htmlFor='name'></label>
 				<input
 					className='input'
 					type='text'
 					name='name'
 					label='name'
-					placeholder='Human Person'
+					placeholder='Name'
 					value={props.name}
 					onChange={inputHandler}
 				/>
-				<label htmlFor='rank'>Rank</label>
+				<label htmlFor='rank'></label>
 				<input
 					className='input'
 					type='text'
 					name='rank'
 					label='rank'
-					placeholder='Human Rank'
+					placeholder='Rank'
 					value={props.rank}
 					onChange={inputHandler}
 				/>
-				<label htmlFor='nickname'>Nickname</label>
+				<label htmlFor='nickname'></label>
 				<input
 					className='input'
 					type='text'
 					name='nickname'
 					label='nickname'
-					placeholder='Human Nickname'
+					placeholder='Nickname'
 					value={props.nickname}
 					onChange={inputHandler}
-				/>
+				/>{' '}
 				<button onClick={submitHandler} className='btn'>
 					Add Players
 				</button>
