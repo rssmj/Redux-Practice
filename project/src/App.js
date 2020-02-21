@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import PlayerList from './components/PlayerCard'
-import PlayerForm from './components/PlayerList.js';
+import PlayerList from './components/PlayerList';
+import PlayerForm from './components/PlayerForm.js';
 
 function App() {
 	return (
