@@ -16,7 +16,7 @@ const PlayerList = props => {
 		<div>
 			{/* <h1>Hello from the PlayerList component!!</h1> */}
 			{props.players.map(player => (
-				<PlayerCard player={player} />
+				<PlayerCard key={player.id} player={player} />
 			))}
 		</div>
 	);

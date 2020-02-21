@@ -35,18 +35,20 @@ const playerReducer = (state = initialState, action) => {
 			return {
 				...state,
 				isFetching: false,
-				errors: action.payload
+				errors: ''
 			};
 		case POST_DATA:
 			return {
 				...state,
-				isPosting: true
+				isPosting: true,
+				players: [...state.players],
+				errors: ''
 			};
 		case POST_SUCCESS:
 			return {
 				...state,
 				isPosting: false,
-				players: [...state.players, action.payload]
+				players: action.payload
 			};
 		case POST_FAIL:
 			return {

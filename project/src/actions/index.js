@@ -20,16 +20,16 @@ export const fetchPlayers = () => dispatch => {
 export const POST_DATA = 'POST_DATA';
 export const POST_SUCCESS = 'POST_SUCCESS';
 export const POST_FAIL = 'POST_FAIL';
-export const postPlayers = () => dispatch => {
+export const postPlayers = player => dispatch => {
 	dispatch({ type: POST_DATA });
 	axios
-		.post(`http://localhost:8888/players`)
+		.post(`http://localhost:8888/players`, player)
 		.then(res => {
 			console.log(res.data);
 			dispatch({ type: POST_SUCCESS, payload: res.data });
 		})
 		.catch(err => {
 			console.log(err);
-			dispatch({ type: POST_FAIL, payload: err });
+			dispatch({ type: POST_FAIL, payload: err.res });
 		});
 };
